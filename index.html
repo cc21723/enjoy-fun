@@ -72,11 +72,13 @@
             // 載入導覽列
             $("#navbar-placeholder").load("./model/navbar.html", function () {
                 // 點擊導覽列時，載入對應內容
-                $(".nav-link:not(.external)").on("click", function (e) {
+                $(document).on("click", ".nav-link:not(.dropdown-toggle):not(.external)", function (e) {
                     e.preventDefault();
                     const target = $(this).attr("href");
                     $("#main-content").load("./pages/" + target + ".html");
                 });
+
+
             });
 
             // 載入頁尾
