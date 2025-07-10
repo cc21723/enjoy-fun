@@ -1,0 +1,149 @@
+/* 基礎設定 */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: linear-gradient(to bottom, #AEE1F9 0%, #FFF8F0 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 導覽列 */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 2px solid #AEE1F9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #3B82F6;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3B82F6 !important;
+    text-decoration: underline;
+}
+
+.dropdown-menu {
+    background-color: #F2EAD3;
+}
+
+/* 輪播區塊 */
+.carousel-inner img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 主要內容區塊 */
+main.container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+/* 最新消息文字 */
+.news-link {
+    color: #FF6B6B;
+    font-weight: bold;
+    text-decoration: none;
+}
+.news-link:hover {
+    text-decoration: underline;
+}
+
+/* 表格樣式 */
+.table {
+    background-color: white;
+}
+.table th {
+    background-color: #AEE1F9;
+    color: #333;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+/* 頁尾樣式 */
+.footer {
+    background: #3B82F6;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0.3rem;
+}
+
+/* 自訂導覽列 */
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 2px solid #AEE1F9;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    border-radius: 0 0 16px 16px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.custom-navbar .navbar-brand {
+    color: #3B82F6;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding-left: 0.5rem;
+}
+
+.custom-navbar .nav-link {
+    color: #006994 !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #3B82F6 !important;
+    background-color: rgba(173, 216, 230, 0.15);
+    border-radius: 8px;
+}
+
+.custom-navbar .dropdown-menu {
+    /* background-color: #f0faff; */
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .dropdown-item {
+    color: #006994;
+    font-weight: 500;
+}
+
+.custom-navbar .dropdown-item:hover {
+    background-color: #e0f7ff;
+    color: #0077b6;
+}
+
+
+
+/* RWD */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    main.container {
+        padding: 1rem;
+    }
+}
