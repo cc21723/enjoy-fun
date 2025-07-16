@@ -1,151 +1,224 @@
-/* 基礎設定 */
+/* 全站字型與背景設定 */
 body {
     font-family: 'Noto Sans TC', sans-serif;
-    background: linear-gradient(to bottom, #AEE1F9 0%, #FFF8F0 100%);
-    color: #333;
+    background: linear-gradient(to bottom, #BEE9F7 0%, #FFFFFF 100%);
+    color: #444;
     margin: 0;
     padding: 0;
 }
-a{
-    text-decoration: none;
+
+/* 標題樣式 */
+h1, h2, h3, h4, h5 {
+    color: #2C7FB8;
+    font-weight: bold;
 }
-/* 導覽列 */
-.navbar {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 2px solid #AEE1F9;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+h6 {
+    color: #5CA9E9;
+    font-weight: bold;
+}
+
+/* 超連結樣式 */
+a {
+    text-decoration: none;
+    color: #4FA9E6;
+    transition: 0.2s ease-in-out;
+}
+a:hover {
+    color: #2C7FB8;
+}
+
+/* 導覽列設計 */
+.navbar,
+.custom-navbar {
+    /* background-color: rgba(255, 255, 255, 0.95); */
+    /* border-bottom: 2px solid #BEE9F7; */
+    /* box-shadow: 0 2px 8px rgba(76, 175, 240, 0.12); */
+    /* border-radius: 0 0 16px 16px; */
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
 }
 
 .navbar-brand {
+    font-size: 1.6rem;
     font-weight: bold;
-    color: #3B82F6;
-    font-size: 1.5rem;
+    color: #2C7FB8;
 }
-
 .nav-link {
-    color: #333 !important;
+    color: #2C7FB8 !important;
     font-weight: 500;
-    transition: 0.3s ease;
 }
-
 .nav-link:hover {
-    color: #3B82F6 !important;
-    text-decoration: underline;
+    color: #4FA9E6 !important;
+    background-color: rgba(190, 233, 247, 0.3);
+    border-radius: 8px;
 }
 
+/* 下拉選單 */
 .dropdown-menu {
-    background-color: #F2EAD3;
+    background-color: #F0FAFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+.dropdown-item {
+    color: #0077b6;
+}
+.dropdown-item:hover {
+    background-color: #E0F7FF;
+    color: #2C7FB8;
 }
 
 /* 輪播區塊 */
 .carousel-inner img {
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* 主要內容區塊 */
+/* 主要內容 */
 main.container {
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 2rem;
-    margin-top: 1rem;
+    padding: 2rem 1rem;
 }
 
-/* 最新消息文字 */
+/* 卡片樣式 */
+.card {
+    background-color: #F9FCFF;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(76, 175, 240, 0.12);
+    margin-bottom: 2rem;
+}
+
+/* 區塊標題樣式 */
+.section-title, h5 {
+    border-left: 5px solid #4FA9E6;
+    padding-left: 0.75rem;
+    margin-top: 2rem;
+}
+
+/* 清單樣式 */
+ul, ol {
+    padding-left: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+}
+ul li::marker, ol li::marker {
+    color: #4FA9E6;
+}
+
+/* 最新消息連結 */
 .news-link {
-    color: #FF6B6B;
+    color: #2C7FB8;
     font-weight: bold;
-    text-decoration: none;
 }
 .news-link:hover {
+    color: #1A6DB4;
     text-decoration: underline;
 }
 
 /* 表格樣式 */
 .table {
-    background-color: white;
-}
-.table th {
-    background-color: #AEE1F9;
-    color: #333;
-    text-align: center;
-}
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f8f9fa;
+    background-color: #F9FCFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(76, 175, 240, 0.15);
+    overflow: hidden;
+    font-size: 0.95rem;
 }
 
-/* 頁尾樣式 */
+/* 表頭樣式 */
+.table thead th {
+    background-color: #BEE9F7;
+    color: #2C7FB8;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 偶數列底色 */
+.table tbody tr:nth-of-type(even) {
+    background-color: #E6F6FB;
+}
+
+/* 單元格文字 */
+.table td {
+    
+    text-align: center;
+    padding: 0.75rem;
+    color: #444;
+}
+
+/* 表尾合併列樣式 */
+.table tbody tr:last-child td {
+    background-color: #DDF3FA;
+    color: #006994;
+    font-weight: 500;
+    text-align: left;
+    padding: 1rem;
+}
+
+/*飛機航班卡片樣式*/
+.flight-card {
+  background-color: #F9FCFF;
+  border-radius: 16px;
+  border: 1px solid #D0ECF5;
+  box-shadow: 0 4px 12px rgba(76, 175, 240, 0.1);
+}
+
+.flight-card ul {
+  list-style-type: '✈️ ';
+  padding-left: 1rem;
+  margin-top: 1rem;
+  color: #444;
+}
+
+.flight-card ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.flight-card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2C7FB8;
+}
+
+/*船班卡片樣式*/
+.ferry-card {
+  background-color: #F9FCFF;
+  border-radius: 16px;
+  border: 1px solid #D0ECF5;
+  box-shadow: 0 4px 12px rgba(76, 175, 240, 0.1);
+  max-width: 500px; /* ✅ 控制卡片寬度 */
+  margin: 0 auto;    /* ✅ 置中 */
+}
+
+
+.ferry-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2C7FB8;
+}
+
+.ferry-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+
+/* 頁尾設計 */
 .footer {
-    background: #3B82F6;
+    background: #4FA9E6;
     color: #fff;
     text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
+    padding: 1.5rem;
     font-size: 0.9rem;
 }
 
-.footer p {
-    margin: 0.3rem;
-}
-
-/* 自訂導覽列 */
-.custom-navbar {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 2px solid #AEE1F9;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
-    border-radius: 0 0 16px 16px;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.custom-navbar .navbar-brand {
-    color: #3B82F6;
-    font-weight: bold;
-    font-size: 1.6rem;
-    padding-left: 0.5rem;
-}
-
-.custom-navbar .nav-link {
-    color: #006994 !important;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.custom-navbar .nav-link:hover {
-    color: #3B82F6 !important;
-    background-color: rgba(173, 216, 230, 0.15);
-    border-radius: 8px;
-}
-
-.custom-navbar .dropdown-menu {
-    /* background-color: #f0faff; */
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.custom-navbar .dropdown-item {
-    color: #006994;
-    font-weight: 500;
-}
-
-.custom-navbar .dropdown-item:hover {
-    background-color: #e0f7ff;
-    color: #0077b6;
-}
-
-
-
-/* RWD */
+/* 響應式設計 */
 @media (max-width: 768px) {
     .navbar-brand {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
     }
-
     main.container {
         padding: 1rem;
     }
