@@ -204,3 +204,23 @@ iframe {
         padding: 1rem;
     }
 }
+/* 小螢幕下置中品牌標題 */
+@media (max-width: 991.98px) {
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .navbar-brand {
+    position: static; /* 回到正常流 */
+    margin: 0 auto;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    filter: invert(1); /* 白色漢堡圖示 */
+  }
+}
